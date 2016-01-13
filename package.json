@@ -5,7 +5,9 @@
   "main": "bin/webpagetest-compare",
   "bin": "bin/webpagetest-compare",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . && jscs .",
+    "precommit": "npm run lint",
+    "test": "echo 'There are no tests. There are no errors'"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,10 @@
   "homepage": "https://github.com/andre487/webpagetest-comparator#readme",
   "dependencies": {
     "webpagetest": "^0.3.4"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "husky": "^0.10.2",
+    "jscs": "^2.8.0"
   }
 }
