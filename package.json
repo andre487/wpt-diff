@@ -1,9 +1,9 @@
 {
-  "name": "webpagetest-comparator",
+  "name": "wpt-diff",
   "version": "1.0.0",
   "description": "Tool for compare services with WebPageTest.org",
-  "main": "bin/webpagetest-compare",
-  "bin": "bin/webpagetest-compare",
+  "main": "lib/wpt-diff.js",
+  "bin": "bin/wpt-diff",
   "scripts": {
     "lint": "eslint . && jscs .",
     "precommit": "npm run lint",
@@ -25,7 +25,10 @@
   },
   "homepage": "https://github.com/andre487/webpagetest-comparator#readme",
   "dependencies": {
-    "webpagetest": "^0.3.4"
+    "lodash": "^4.0.0",
+    "q": "^1.4.1",
+    "vow-asker": "^1.0.0",
+    "webpagetest": "0.3.4"
   },
   "devDependencies": {
     "eslint": "^1.10.3",
