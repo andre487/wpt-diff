@@ -13,13 +13,13 @@ describe('WPTDiff', function () {
 
     describe('params', function () {
         it('should provide API key from params', function () {
-            var wptDiff = new WPTDiff('A');
+            var wptDiff = new WPTDiff({apiKey: 'A'});
 
             assert.equal(wptDiff.getApiKey(), 'A');
         });
 
         it('should provide host from params', function () {
-            var wptDiff = new WPTDiff('A', 'foo.ru');
+            var wptDiff = new WPTDiff({host: 'foo.ru'});
 
             assert.equal(wptDiff.getHost(), 'foo.ru');
         });

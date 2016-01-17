@@ -6,7 +6,10 @@ describe('parameters', function () {
             WPT_API_KEY: 'A.foo',
             WPT_LOCATION: 'Moscow_IE9:Chrome',
             WPT_CONNECTIVITY: 'Cable',
+
             WPT_MOBILE: '1',
+            WPT_BODIES: '1',
+            WPT_TIMELINE: '1',
 
             WPT_LABELS: 'Yandex Google',
             WPT_URLS: 'https://yandex.ru  https://google.ru'
@@ -32,6 +35,14 @@ describe('parameters', function () {
 
         it('should provide mobile param', function () {
             assert.propertyVal(params, 'mobile', true);
+        });
+
+        it('should provide bodies param', function () {
+            assert.propertyVal(params, 'bodies', true);
+        });
+
+        it('should provide timeline param', function () {
+            assert.propertyVal(params, 'timeline', true);
         });
 
         it('should provide labels', function () {
@@ -78,6 +89,30 @@ describe('parameters', function () {
             var params = parameters.getFromCli([]);
 
             assert.propertyVal(params, 'mobile', false);
+        });
+
+        it('should provide bodies param', function () {
+            var params = parameters.getFromCli(['--bodies']);
+
+            assert.propertyVal(params, 'bodies', true);
+        });
+
+        it('should provide bodies param absent', function () {
+            var params = parameters.getFromCli([]);
+
+            assert.propertyVal(params, 'bodies', false);
+        });
+
+        it('should provide timeline param', function () {
+            var params = parameters.getFromCli(['--timeline']);
+
+            assert.propertyVal(params, 'timeline', true);
+        });
+
+        it('should provide timeline param absent', function () {
+            var params = parameters.getFromCli([]);
+
+            assert.propertyVal(params, 'timeline', false);
         });
 
         it('should provide labels', function () {
