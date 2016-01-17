@@ -8,6 +8,11 @@ Tool for compare services with WebPageTest.org
 With this tool you can create tests on WebPageTest.org public or private instance for several urls and
 compare rendering of page with progress video.
 
+This tool provides data in JSON format. It provides:
+  * Test cases on WebPageTest with reports urls
+  * Detailed data in JSON format about page loading metrics for each page
+  * Video with pages loading timeline 
+
 ## Usage
 ```
 usage: wpt-diff [-h] [-v] [--api-key APIKEY] [--host HOST]
@@ -35,4 +40,50 @@ Optional arguments:
   --url URLS            URLs for tests. Can be passed N times. Env: WPT_URLS
 
 Program documentation: https://github.com/andre487/wpt-diff#readme
+```
+
+## Results format
+```
+{
+    "ids": {
+      url1: id1,
+      ...,
+      urlN: idN
+    },
+    "launch": {
+        id1: {
+          "testId": "160117_VC_SQJ",
+          "ownerKey": ownerKey,
+          "jsonUrl": "http://www.webpagetest.org/jsonResult.php?test=id1",
+          "xmlUrl": "http://www.webpagetest.org/xmlResult/id1/",
+          "userUrl": "http://www.webpagetest.org/result/id1/",
+          "summaryCSV": "http://www.webpagetest.org/result/id1/page_data.csv",
+          "detailCSV": "http://www.webpagetest.org/result/id1/requests.csv"
+        },
+        ...,
+        idN: ...
+    },
+    "testCases": {
+        id1: technical test case data,
+        ...,
+        idN: ...
+    },
+    "results": {
+        id1: very detailed test results data, 
+        ...,
+        idN: ...
+    },
+    "video": {
+      "videoId": videoId,
+      "jsonUrl": "http://www.webpagetest.org/video/view.php?f=json&id=videoId",
+      "userUrl": "http://www.webpagetest.org/video/view.php?id=videoId"
+    },
+    "player": {
+      "videoId": videoId,
+      "videoUrl": "http://www.webpagetest.org/video/download.php?id=videoId",
+      "embedUrl": "http://www.webpagetest.org/video/view.php?embed=1&id=videoId",
+      "width": 520,
+      "height": 432
+    }
+}
 ```
