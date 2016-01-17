@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint . && jscs .",
     "precommit": "npm run lint",
-    "test": "echo 'There are no tests. There are no errors'"
+    "test": "mocha --require test/setup.js test/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -21,18 +21,21 @@
   "author": "Andrey Prokopyuk <andrey.prokopyuk@gmail.com> (http://andre.life)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andre487/webpagetest-comparator/issues"
+    "url": "https://github.com/andre487/wpt-diff/issues"
   },
-  "homepage": "https://github.com/andre487/webpagetest-comparator#readme",
+  "homepage": "https://github.com/andre487/wpt-diff#readme",
   "dependencies": {
+    "argparse": "^1.0.4",
     "lodash": "^4.0.0",
     "q": "^1.4.1",
     "vow-asker": "^1.0.0",
     "webpagetest": "0.3.4"
   },
   "devDependencies": {
+    "chai": "^3.4.1",
     "eslint": "^1.10.3",
     "husky": "^0.10.2",
-    "jscs": "^2.8.0"
+    "jscs": "^2.8.0",
+    "mocha": "^2.3.4"
   }
 }
