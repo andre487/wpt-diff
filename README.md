@@ -42,6 +42,13 @@ Optional arguments:
 Program documentation: https://github.com/andre487/wpt-diff#readme
 ```
 
+Example:
+```
+ $ export WPT_LOG_LEVEL=debug 
+ $ export WPT_API_KEY=<your key> 
+ $ wpt-diff --url https://yandex.ru --url https://google.ru --label Yandex --label Google > results.json
+```
+
 ## Results format
 ```
 {
