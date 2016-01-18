@@ -1,17 +1,14 @@
 # WebPageTest Diff
-Tool for compare services with WebPageTest.org
+Uses several URLs to run tests with [WebPageTest.org](http://www.webpagetest.org/), and prints results to stdout.
 
 [![Code Climate](https://codeclimate.com/github/andre487/wpt-diff/badges/gpa.svg)](https://codeclimate.com/github/andre487/wpt-diff)
 [![bitHound Code](https://www.bithound.io/github/andre487/wpt-diff/badges/code.svg)](https://www.bithound.io/github/andre487/wpt-diff)
 [![bitHound Overall Score](https://www.bithound.io/github/andre487/wpt-diff/badges/score.svg)](https://www.bithound.io/github/andre487/wpt-diff)
 
-With this tool you can create tests on WebPageTest.org public or private instance for several urls and
-compare rendering of page with progress video.
-
-This tool provides data in JSON format. It provides:
-  * Test cases on WebPageTest with reports urls
-  * Detailed data in JSON format about page loading metrics for each page
-  * Video with pages loading timeline 
+Results contain the following data (in JSON):
+  * URLs of reports on WebPageTest.org
+  * Loading metrics for each page
+  * Video with loading timeline for all pages
 
 ## Usage
 ```
