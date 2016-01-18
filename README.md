@@ -10,6 +10,8 @@ Results contain the following data (in JSON):
   * Loading metrics for each page
   * Video with loading timeline for all pages
 
+You need an [API key](http://www.webpagetest.org/getkey.php) for using public instance
+
 ## Usage
 ```
 usage: wpt-diff [-h] [-v] [--api-key APIKEY] [--host HOST]
@@ -39,7 +41,10 @@ Optional arguments:
 Program documentation: https://github.com/andre487/wpt-diff#readme
 ```
 
-Example:
+For understanding location param see public instance agents list: 
+[locations](http://www.webpagetest.org/getLocations.php?f=html&k=A)
+
+## Example
 ```
  $ export WPT_LOG_LEVEL=debug 
  $ export WPT_API_KEY=<your key> 
