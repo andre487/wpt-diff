@@ -48,8 +48,12 @@ For understanding location param see public instance agents list:
 ```
  $ export WPT_LOG_LEVEL=debug 
  $ export WPT_API_KEY=<your key> 
- $ wpt-diff --url https://yandex.ru --url https://google.ru --label Yandex --label Google > results.json
+ $ wpt-diff --url https://yandex.ru --url https://google.ru --url https://bing.com --label Yandex --label Google --label Bing
 ```
+
+Results:
+  * [results.json](examples/results.json)
+  * [Video](http://www.webpagetest.org/video/view.php?embed=1&id=160118_ac785dba5f75107644e25dd03ddcf52e61d12b86)
 
 ## Results format
 ```
